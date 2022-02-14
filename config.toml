@@ -1,0 +1,88 @@
+# The URL the site will be built for
+base_url = "https://librematch.org"
+title = "LibreMatch"
+
+theme = "blow"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+default_language = "en"
+
+# taxonomies = [
+#     {name = "tags", paginate_by = 5, feed = true},
+#     {name = "categories", paginate_by = 5, feed = true},
+# ]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+enable_search = false
+enable_sidebar = false
+enable_multilingue = false
+adsense_link = ""
+
+[extra.default_author]
+name = "LibreMatch Team"
+avatar = "https://librematch.org/swords.png"
+avatar_alt = ""
+
+# Index page
+[extra.index]
+title = "LibreMatch"
+image = "https://librematch.org/swords.png"
+image_alt = ""
+
+[extra.social]
+github = "https://github.com/librematch"
+email = "info@librematch.org"
+linkedin = ""
+twitter = ""
+gitlab = ""
+
+# [extra.favicon]
+# favicon = "/icons/favicon.ico"
+# favicon_16x16 = "/icons/favicon-16x16.png"
+# favicon_32x32 = "/icons/favicon-32x32.png"
+# apple_touch_icon = "/icons/apple-touch-icon.png"
+# android_chrome_512 = "/icons/android-chrome-512x512.png"
+# android_chrome_192 = "/icons/android-chrome-192x192.png"
+# manifest = "/icons/site.webmanifest"
+
+# [extra.lang]
+# items = [
+#     { lang = "en", links = [
+#         { base_url = "/", name = "English" },
+#         # { base_url = "/fr", name = "French" },
+#     ] },
+# ]
+
+[extra.navbar]
+items = [
+#     { lang = "en", links = [
+#         { url = "/", name = "Home" },
+#         # { url = "/tags", name = "Tags" },
+#         # { url = "/about", name = "About" },
+#     ] },
+#     # { lang = "en", links = [
+#     #     { url = "/", name = "Home" },
+#     #     { url = "/categories", name = "Categories" },
+#     #     { url = "/tags", name = "Tags" },
+#     # ] },
+]
+title = "LibreMatch"
+
+[extra.sidebar]
+items = [
+#     { lang = "en", links = [
+#         # { url = "/markdown", name = "Markdown" },
+#         # { url = "/blog", name = "Blog" },
+#     ] },
+]
