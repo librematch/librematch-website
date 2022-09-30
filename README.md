@@ -6,9 +6,13 @@
 
 [Get and setup Zola](https://www.getzola.org/documentation/getting-started/installation/).
 
-### Building
+### Developing
+
+Run `zola serve` and check output for access in browser. Change files.
 
 ### Deploying
+
+Run `zola build` and deploy `/public` to webserver directory.
 
 ## License
 
