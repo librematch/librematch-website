@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://librematch.org"
-title = "LibreMatch"
+title = "Libre:Match"
 
 theme = "blow"
 
@@ -8,9 +8,11 @@ theme = "blow"
 compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+build_search_index = true
 
 default_language = "en"
+
+generate_feed = true
 
 # taxonomies = [
 #     {name = "tags", paginate_by = 5, feed = true},
@@ -18,31 +20,84 @@ default_language = "en"
 # ]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+# When set to "true", all code blocks are highlighted.
+highlight_code = true
+
+# A list of directories used to search for additional `.sublime-syntax` files.
+extra_syntaxes = []
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = true
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = true
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = true
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = true
+
+# Configuration of the link checker.
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [""]
+
+# Skip anchor checking for external URLs that start with these prefixes
+skip_anchor_prefixes = ["https://caniuse.com/"]
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = true
+# Whether to include the path of the page/section in the index
+include_path = true
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+truncate_content_length = 100
 
 [extra]
 # Put all your custom variables here
-enable_search = false
+enable_search = true
 enable_sidebar = false
 enable_multilingue = false
 adsense_link = ""
 
 [extra.default_author]
-name = "LibreMatch Team"
+name = "Libre:Match Team"
 avatar = "https://librematch.org/swords.png"
 avatar_alt = ""
 
 # Index page
 [extra.index]
-title = "LibreMatch"
+title = "Libre:Match"
 image = "https://librematch.org/swords.png"
 image_alt = ""
 
 [extra.social]
 github = "https://github.com/librematch"
 email = "info@librematch.org"
+discord = "https://discord.gg/MvuusBxtuB"
 linkedin = ""
 twitter = ""
 gitlab = ""
@@ -63,26 +118,31 @@ gitlab = ""
 #         # { base_url = "/fr", name = "French" },
 #     ] },
 # ]
+taxonomies = [
+    { name = "tags", paginate_by = 5, feed = true },
+    { name = "categories", paginate_by = 5, feed = true },
+]
 
 [extra.navbar]
 items = [
-#     { lang = "en", links = [
-#         { url = "/", name = "Home" },
-#         # { url = "/tags", name = "Tags" },
-#         # { url = "/about", name = "About" },
-#     ] },
-#     # { lang = "en", links = [
-#     #     { url = "/", name = "Home" },
-#     #     { url = "/categories", name = "Categories" },
-#     #     { url = "/tags", name = "Tags" },
-#     # ] },
+    { lang = "en", links = [
+        { url = "/", name = "Home" },
+        { url = "/blog", name = "Blog" },
+        { url = "/docs/LibreMatch_Pitch_Deck.pdf", name = "Pitch Deck" },
+        # { url = "/about", name = "About" },
+    ] },
+    #     # { lang = "en", links = [
+    #     #     { url = "/", name = "Home" },
+    #     #     { url = "/categories", name = "Categories" },
+    #     #     { url = "/tags", name = "Tags" },
+    #     # ] },
 ]
-title = "LibreMatch"
+title = "Libre:Match"
 
 [extra.sidebar]
 items = [
-#     { lang = "en", links = [
-#         # { url = "/markdown", name = "Markdown" },
-#         # { url = "/blog", name = "Blog" },
-#     ] },
+    #     { lang = "en", links = [
+    #         # { url = "/markdown", name = "Markdown" },
+    #         # { url = "/blog", name = "Blog" },
+    #     ] },
 ]
