@@ -128,6 +128,7 @@ items = [
     { lang = "en", links = [
         { url = "/", name = "Home" },
         { url = "/blog", name = "Blog" },
+        { url = "https://wiki.librematch.org", name = "Wiki" },
         { url = "/docs/LibreMatch_Pitch_Deck.pdf", name = "Pitch Deck" },
         # { url = "/about", name = "About" },
     ] },

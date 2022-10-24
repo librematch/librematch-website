@@ -1,6 +1,6 @@
 +++
 title = "Libre:Match Update"
-description = "AoE2.net has gone done and with it a data source for many community projects. We are continuing our effort and ask you for your participation, namely giving us insight to your requirements."
+description = "AoE2.net has gone down and with it a data source for many community projects. We are continuing our effort and ask you for your participation, namely giving us insight to your requirements."
 date = 2022-09-23
 tags = ["Libre:Match", "Update", "Discord", "Requirements Analysis", "Use cases"]
 categories = ["Status updates"]
